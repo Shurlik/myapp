@@ -1,0 +1,20 @@
+.timer{
+    text-align: center;
+    
+    &__display{
+        margin: 5px auto;
+        padding: 5px;
+        border: 1px solid black;
+        width: 100px;
+        border-radius: 5px;
+        overflow: hidden;
+        font-weight: bold;
+    }
+
+    &__buttons button{
+        margin: 5px auto;
+        cursor: pointer;
+        display: block;
+        border-radius: 5px;
+    }
+}
