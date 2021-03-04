@@ -8,10 +8,13 @@ class App extends Component {
 
     constructor() {
         super();
-        this.state = {time: {s: 0, m: 0, h: 0}, started: false}
+
+        this.state = {time: {s: 0, m: 0, h: 0}, started: false} //sending to another component to display
+
         this.started = false;
         this.sub = null;
         this.timer = null;
+
         this.observable = new Observable(subscriber => {
             this.started = true;
             let count = 1;
@@ -19,7 +22,7 @@ class App extends Component {
             this.timer = setInterval(() => {
                 subscriber.next(count);
                 if (count === 60) {
-                    count = 1
+                    count = 0
                 }
                 count++;
             }, 1000);
